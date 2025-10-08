@@ -1,0 +1,106 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0); /* purple gradient */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for chat */
+.chat-container {
+    background-color: #ffffffee; /* semi-transparent white */
+    border-radius: 20px;
+    width: 450px;
+    max-width: 90%;
+    padding: 20px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.chat-container h2 {
+    text-align: center;
+    color: #4a00e0;
+    margin-bottom: 15px;
+}
+
+/* Messages box */
+.messages-box {
+    flex: 1;
+    border: 2px solid #4a00e0;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
+    overflow-y: auto;
+    background: linear-gradient(180deg, #e0e0ff, #ffffff);
+}
+
+/* User message */
+.message.user {
+    text-align: right;
+}
+.message.user p {
+    background-color: #4a00e0;
+    color: white;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin: 5px 0;
+}
+
+/* AI message */
+.message.bot {
+    text-align: left;
+}
+.message.bot p {
+    background-color: #f0f0f0;
+    color: #333;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin: 5px 0;
+}
+
+/* Input area */
+.input-area {
+    display: flex;
+}
+.input-area input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 15px 0 0 15px;
+    border: 2px solid #4a00e0;
+    outline: none;
+    font-size: 16px;
+}
+.input-area button {
+    background-color: #4a00e0;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.input-area button:hover {
+    background-color: #8e2de2;
+}
+
+/* Add AI-themed image in background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2018/05/08/08/30/artificial-intelligence-3382507_1280.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1; /* subtle image */
+    z-index: -1;
+}
